@@ -13,7 +13,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='struct.proto',
   package='proto',
-  serialized_pb='\n\x0cstruct.proto\x12\x05proto\"+\n\x05\x42oard\x12\"\n\x06\x65ntity\x18\x01 \x03(\x0b\x32\x12.proto.BoardEntity\"V\n\x0b\x42oardEntity\x12\x1d\n\x06\x61uthor\x18\x01 \x02(\x0b\x32\r.proto.Person\x12\x0c\n\x04post\x18\x02 \x02(\t\x12\x0c\n\x04link\x18\x03 \x03(\t\x12\x0c\n\x04\x64\x61ta\x18\x04 \x02(\t\"\'\n\x06Person\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x0f\n\x07surname\x18\x02 \x01(\t')
+  serialized_pb='\n\x0cstruct.proto\x12\x05proto\"+\n\x05\x42oard\x12\"\n\x06\x65ntity\x18\x01 \x03(\x0b\x32\x12.proto.BoardEntity\"V\n\x0b\x42oardEntity\x12\x1d\n\x06\x61uthor\x18\x01 \x02(\x0b\x32\r.proto.Person\x12\x0c\n\x04post\x18\x02 \x02(\t\x12\x0c\n\x04link\x18\x03 \x03(\t\x12\x0c\n\x04\x64\x61te\x18\x04 \x02(\x04\"\'\n\x06Person\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x0f\n\x07surname\x18\x02 \x01(\t')
 
 
 
@@ -75,9 +75,9 @@ _BOARDENTITY = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='data', full_name='proto.BoardEntity.data', index=3,
-      number=4, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      name='date', full_name='proto.BoardEntity.date', index=3,
+      number=4, type=4, cpp_type=4, label=2,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),

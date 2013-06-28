@@ -1,0 +1,29 @@
+# Create your views here.
+from django.shortcuts import render_to_response
+from django.http import HttpResponse
+from board.struct_pb2 import Board, BoardEntity, Person
+import binascii
+
+board = Board()
+
+def add_post(req):
+    print "1"
+    print req.body
+    print req.read()
+    print binascii.b2a_uu(req.body)
+    entity = BoardEntity()
+    print "2"
+    author = entity.author
+    author.name = "asdf"
+    entity.post = "asdf"
+    #entity.ParseFromString(req.body)
+    print entity.SerializeToString()
+    #board.add(entity)
+    print entity
+    return HttpResponse(200)
+
+def index(req):
+    return render_to_response('index.html')
+
+def list_posts(req):
+    return HttpResponse(board.SerializeToString());

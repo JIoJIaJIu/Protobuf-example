@@ -1,15 +1,25 @@
 # Create your views here.
 from django.shortcuts import render_to_response
-import board.struct_pb2
+from django.http import HttpResponse
+from board.struct_pb2 import Board
+import binascii
+import struct
 
-posts = []
+board = Board()
 
 def add_post(req):
-    posts.add[1]
-    pass
+    # hardcode
+    binary =  tuple(map(lambda x: int(x.split("=")[1]), req.body.split("&")))
+    string = "".join(map(lambda i: chr(i), binary))
+    entity = board.entity.add()
+    print entity.ParseFromString(string)
+    print board
+    return HttpResponse(200)
 
 def index(req):
     return render_to_response('index.html')
 
 def list_posts(req):
-    return posts;
+    string = board.SerializeToString()
+    res = HttpResponse(string);
+    return res
