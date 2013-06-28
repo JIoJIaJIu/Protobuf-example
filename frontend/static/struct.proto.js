@@ -28,10 +28,10 @@ proto.BoardEntity = PROTO.Message("proto.BoardEntity",{
 		type: function(){return PROTO.string;},
 		id: 3
 	},
-	data: {
+	date: {
 		options: {},
 		multiplicity: PROTO.required,
-		type: function(){return PROTO.string;},
+		type: function(){return PROTO.uint64;},
 		id: 4
 	}});
 proto.Person = PROTO.Message("proto.Person",{

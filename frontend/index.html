@@ -2,13 +2,39 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <script src="http://yandex.st/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-    <script src="/static/struct.js"></script>
+    <script src="http://guro.webfactional.com/static/protobuf.js"></script>
+    <script src="/static/struct.proto.js"></script>
     <script src="/static/init.js"></script>
+    <style type="text/css">
+        * {
+            font-size:16px;
+            font-family: Arial, sans-serif;
+        }
+        
+        ol li h2 span {
+           padding-left: 20px;
+           font-size: 14px;
+           color:gray;
+        }
+
+        .form-entry {
+            margin: 10px 0px;
+        }
+
+        textarea {
+            width: 400px;
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
-    <div id="container"/>
+    <div id="container"></div>
+
     <button id="refresh">Обновить</button>
     <form id="postForm">
+        <div class="form-entry">
+            <input type="text" placeholder="Name" id="name"/>
+        </div>
         <div class="form-entry">
             <textarea id="text"></textarea>
         </div>
