@@ -8,7 +8,7 @@ message BoardEntity {
     required Person author = 1;
     required string post = 2;
     repeated string link = 3;
-    required string data = 4;
+    required uint64 date = 4;
 }
 
 message Person {
